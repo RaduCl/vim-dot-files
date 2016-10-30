@@ -1,3 +1,11 @@
+" Set color scheme path
+
+colorscheme desert
+"colorscheme ir_black
+"colorscheme quantum
+"colorscheme peaksea
+set background=dark
+
 set number			" Show line numbers
 set linebreak			" Break lines at word (requires Wrap lines)
 set showbreak=+++		" Wrap-broken line prefix
@@ -41,13 +49,18 @@ set pastetoggle=<F11>
 " have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
  
- " Attempt to determine the type of a file based on its name and possibly its
- " contents. Use this to allow intelligent auto-indenting for each filetype,
- " and for plugins that are filetype specific.
- filetype indent plugin on
+" Attempt to determine the type of a file based on its name and possibly its
+" contents. Use this to allow intelligent auto-indenting for each filetype,
+" and for plugins that are filetype specific.
+filetype indent plugin on
   
-  " Enable syntax highlighting
-  syntax on
+" Enable syntax highlighting
+syntax on
+
+" highlight tabs and trailing spaces
+set listchars=tab:>-,trail:-
+set list
+
 " ---My Macros---
 
 " Ctrl+jk move lines, text blocks up and down
@@ -60,5 +73,6 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 
 " press Enter to insert new line without staying in INSERT mode
 " pres Shift + Enter to add new line above current line
-nmap <S-Enter> O<Esc>
+nmap <C-o> O<Esc>
 nmap <CR> o<Esc>
+
