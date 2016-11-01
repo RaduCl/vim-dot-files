@@ -1,12 +1,14 @@
 " Set color scheme path
 
-colorscheme desert
+"colorscheme desert
 "colorscheme ir_black
-"colorscheme quantum
+colorscheme quantum
 "colorscheme peaksea
 "colorscheme distinguished
+"colorscheme despacio 
+"colorscheme monokai-soda 
 
-set background=dark
+"set background=dark
 
 set number                      " Show line numbers
 set linebreak                   " Break lines at word (requires Wrap lines)
@@ -57,10 +59,12 @@ set nocompatible
 filetype indent plugin on
 
 syntax on                       " Enable syntax highlighting
+set listchars=tab:>-,trail:-,eol:¬,extends:>,precedes:<,space:·
+
 set t_Co=256                    " Enable the 256 colour pallet
 
 " highlight tabs and trailing spaces
-set listchars=tab:>-,trail:-,eol:¬,extends:>,precedes:<,space:·
+
 set list
 
 " ---My Macros---
@@ -69,7 +73,7 @@ set list
 nnoremap <C-j> :m .+1<CR>==
 nnoremap <C-k> :m .-2<CR>==
 inoremap <C-j> <Esc>:m .+1<CR>==gi
-inoremap <C-k> <Esc>:m .-2<CR>==gi
+"inoremap <C-k> <Esc>:m .-2<CR>==gi     "Enableing this remap Ctrl+K overides insert mode digraphs chars
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
